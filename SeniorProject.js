@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
-	
-  Template.Game.onRendered(function () {
+
+  Template.hello.onRendered(function () {
 	  $( "#draggable_1" ).draggable();
 	  $( "#draggable_2" ).draggable();
 	  $( "#draggable_3" ).draggable();

@@ -1,31 +1,43 @@
 <head>
-  <title>SeniorProject</title>
+  <title>drag_drop_deneme</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #droppable { width: 40%; height: 250px; padding: 0.5em; float: left; margin: 10px; }
+  </style>
 </head>
 
-
-
 <body>
-
+  
   <h1>PLAY</h1>
 
-  {{> Game}}
- 
+  {{> hello}}
+
 </body>
 
-<template name="Game">
-<div class = "container">
-<div class="col-md-6 border-right border-right-contact">
-<div class="panel panel-default">
-<div class = "panel-heading">CODE LABELS</div>
-<div class="panel-body">
-<dl>
- <dd> <label id = "draggable_1">MOVE</label> </dd>
- <dd> <label id = "draggable_2">TURN LEFT</label> </dd>
- <dd> <label id = "draggable_3">TURN RIGHT</label> </dd>
- </dl> 
-</div>
-</div>
-</div>
-</div>
+<template name="hello">
+  <div class = "container">
+    <div class="col-md-6 border-right border-right-contact">
+      <div class="panel panel-default">
+        <div class = "panel-heading">CODE LABELS</div>
+        <div class="panel-body">
+          <dl>
+            <dd> <label id = "draggable_1">MOVE</label> </dd>
+            <dd> <label id = "draggable_2">TURN LEFT</label> </dd>
+            <dd> <label id = "draggable_3">TURN RIGHT</label> </dd>
+          </dl>
+          <div style="height:125px;width:75px;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="droppable" class="ui-widget-header">
+      <p>Drop here</p>
+    </div>
+  </div>
+
+
 </template>
