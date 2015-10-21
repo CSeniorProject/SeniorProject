@@ -1,14 +1,41 @@
+CodeLabels = new Mongo.Collection("codes");
+
 if (Meteor.isClient) {
 	
-  Template.Game.onRendered(function () {
-	  $( "#draggable_1" ).draggable();
-	  $( "#draggable_2" ).draggable();
-	  $( "#draggable_3" ).draggable();
+ Template.Game.helpers({
+    
+	codes: function () {
+      return CodeLabels.find({}, {sort: {createdAt: -1}});
+    }
   });
+  
+  
+ Template.Game.events({
+    "submit .new-task": function (event) {
+      // Prevent default browser form submit
+      event.preventDefault();
+ 
+      // Get value from form element
+      var text = event.target.text.value;
+ 
+      // Insert a task into the collection
+      CodeLabels.insert({
+        text: text,
+        createdAt: new Date() // current time
+      });
+    }
+  });
+  
+  Template.Code.events({  
+    "click .delete": function () {
+      CodeLabels.remove(this._id);
+    }
+  });
+  
 }
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
+	 CodeLabels.remove({});
   });
 }

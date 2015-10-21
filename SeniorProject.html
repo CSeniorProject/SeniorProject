@@ -1,31 +1,53 @@
 <head>
   <title>SeniorProject</title>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
-
-
 
 <body>
 
-  <h1>PLAY</h1>
+  <h1>PLAY TO LEARN CODING</h1>
 
-  {{> Game}}
- 
+  {{> Game}} 
+
 </body>
 
 <template name="Game">
-<div class = "container">
-<div class="col-md-6 border-right border-right-contact">
-<div class="panel panel-default">
-<div class = "panel-heading">CODE LABELS</div>
-<div class="panel-body">
-<dl>
- <dd> <label id = "draggable_1">MOVE</label> </dd>
- <dd> <label id = "draggable_2">TURN LEFT</label> </dd>
- <dd> <label id = "draggable_3">TURN RIGHT</label> </dd>
- </dl> 
+
+<div id="FirstPanel">
+
+	<h1> CODES </h1>
+	
+	<form class="new-task">
+		<input type="submit" name="text" id="MoveLabel" value = "MOVE" />
+	</form>
+	
 </div>
+
+<div id="SecondPanel">
+	<h1>Drop Code Label Here</h1>
+	
+	<ul>
+      {{#each codes}}
+        {{> Code}}
+      {{/each}}
+    </ul>
+	
 </div>
+
+<div id="footer">
+   <p>	CS 401 Project </p>
+   <p>  Team: Sena Kaya, Ezgi Özdil, Elif Doğalı </p>
 </div>
-</div>
+
+</template>
+
+<template name="Code">
+  <li class="{{#if checked}}checked{{/if}}">
+    <button class="delete">&times;</button>
+    
+	<span class="text">{{text}}</span>
+  </li>
+</template>
+ 
+<template name="Code">
+  <li>{{text}}</li>
 </template>
