@@ -3,7 +3,7 @@
 </head>
 
 <body>
-
+  {{> navbar}}
   <h1>PLAY TO LEARN CODING</h1>
 
   {{> Game}}
@@ -11,34 +11,24 @@
 </body>
 
 <template name="Game">
-
 <div id="FirstPanel">
-
 	<h1> CODES </h1>
-
 	<form class="new-task">
 		<input type="submit" name="text" id="MoveLabel" value = "MOVE" />
 	</form>
-
 </div>
-
 <div id="SecondPanel">
 	<h1>Drop Code Label Here</h1>
-
-	<ul>
+	<ul class="ul-type">
       {{#each codes}}
         {{> Code}}
       {{/each}}
     </ul>
-
-  
 </div>
-
 <div id="footer">
    <p>	CS 401 Project </p>
    <p>  Team: Sena Kaya, Ezgi Özdil, Elif Doğalı </p>
 </div>
-
 </template>
 
 <template name="Code">
