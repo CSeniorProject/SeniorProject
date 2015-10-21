@@ -6,7 +6,7 @@
 
   <h1>PLAY TO LEARN CODING</h1>
 
-  {{> Game}} 
+  {{> Game}}
 
 </body>
 
@@ -15,22 +15,23 @@
 <div id="FirstPanel">
 
 	<h1> CODES </h1>
-	
+
 	<form class="new-task">
 		<input type="submit" name="text" id="MoveLabel" value = "MOVE" />
 	</form>
-	
+
 </div>
 
 <div id="SecondPanel">
 	<h1>Drop Code Label Here</h1>
-	
+
 	<ul>
       {{#each codes}}
         {{> Code}}
       {{/each}}
     </ul>
-	
+
+  
 </div>
 
 <div id="footer">
@@ -43,11 +44,11 @@
 <template name="Code">
   <li class="{{#if checked}}checked{{/if}}">
     <button class="delete">&times;</button>
-    
+
 	<span class="text">{{text}}</span>
   </li>
 </template>
- 
+
 <template name="Code">
   <li>{{text}}</li>
 </template>
