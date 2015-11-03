@@ -21,3 +21,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 dbernhard:jquery-ui-draggable
 drewproud:jquery-ui-droppable
 twbs:bootstrap
+kadira:flow-router
+kadira:blaze-layout
+arillo:flow-router-helpers

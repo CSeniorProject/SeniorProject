@@ -13,21 +13,23 @@ body {
 
 #FirstPanel {
 
-	position: absolute;
+
 	border-radius: 20px;
-	width: 500px;
+
 	height: 500px;
   background-color: #FFE5FF;
-  margin-left: 100px;
+
 
 }
-
+#image-left img{
+  width:100%;
+}
 #SecondPanel {
 
-	float: right;
-  margin-right: 100px;
+
+
   overflow:scroll;
-	width: 500px;
+
 	height: 500px;
 	border-radius: 20px ;
   background-color: #C5EFF7;
