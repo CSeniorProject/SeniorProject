@@ -4,17 +4,23 @@
 </div>
 <div id="FirstPanel" class="col-xs-4">
 	<h1> CODES </h1>
-	<form class="new-task">
-		<input type="submit" name="text" id="MoveLabel" value = "MOVE" />
+	<form class="items">
+		<div id="MoveLabel" class = "item">MOVE</div>
+		<div id="TRLabel" class = "item">TURN LEFT</div>
+		<div id="TRLabel" class = "item">TURN RIGHT</div>
+		<!--<input type="submit" name="text" id="MoveLabel2" value = "TURN LEFT" />
+		<input type="submit" name="text" id="MoveLabel3" value = "TURN RIGHT" />-->
 	</form>
 </div>
 <div id="SecondPanel" class="col-xs-4">
 	<h1>Drop Code Label Here</h1>
-	<ul class="ul-type">
+	<div class = "droppable-part">
+	<!--<ul class="ul-type">
       {{#each codes}}
         {{> Code}}
       {{/each}}
-    </ul>
+    </ul>-->
+	</div>
 </div>
 <div id="footer" >
    <p>	CS 401 Project </p>
@@ -25,6 +31,6 @@
 <template name="Code">
   <li class="{{#if checked}}checked{{/if}}">
     <button class="delete">&times;</button>
-		<span class="text">{{text}}</span>
+	<span class="text">{{text}}</span>
   </li>
 </template>
