@@ -10,6 +10,10 @@ body {
   font-size: 14px;
 }
 
+.s-alert-info.s-alert-effect-scale {
+    background: pink;  /* your background color here */
+    color: white;  /* your text color here */
+}
 
 #FirstPanel {
 
@@ -22,9 +26,7 @@ body {
   width:100%;
 }
 #SecondPanel {
-
-  overflow:scroll;
-
+	
   height: 500px;
   border-radius: 20px ;
   background-color: #C5EFF7;
@@ -40,10 +42,15 @@ body {
 .droppable-part {
 	
 	box-sizing: border-box;
+	border-color: black;
 	width: 95%;
-	height: 95%;
+	height: 80%;
 	background: transparent;
 
+}
+
+.dropped-item {
+	
 }
 
 .items input {
