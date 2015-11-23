@@ -26,7 +26,7 @@ body {
   width:100%;
 }
 #SecondPanel {
-	
+
   height: 500px;
   border-radius: 20px ;
   background-color: #C5EFF7;
@@ -40,7 +40,7 @@ body {
 }
 
 .droppable-part {
-	
+
 	box-sizing: border-box;
 	border-color: black;
 	width: 95%;
@@ -50,7 +50,7 @@ body {
 }
 
 .dropped-item {
-	
+
 }
 
 .items input {
@@ -67,7 +67,7 @@ body {
   margin: 0 auto;
 }
 
-.item {
+.move-item {
   box-sizing: border-box;
   padding: 10px 0;
   background: transparent;
@@ -79,7 +79,7 @@ body {
   background-color:white;
   box-shadow:0px 0px 3px 1px #DC6CDC;
   margin: 0 auto;
-  z-index:999; 
+  z-index:999;
 }
 
 .items text {

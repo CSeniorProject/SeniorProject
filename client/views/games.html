@@ -1,39 +1,66 @@
 <template name="game">
-<div class="col-xs-4" id="image-left">
-<img class="img-responsive" src="/img/frozen.jpg">
-</div>
-<div id="FirstPanel" class="col-xs-4">
-	<h1> CODES </h1>
-	<form class="items">
-		<div id="MoveLabel" class = "item">MOVE</div>
-		<div id="TRLabel" class = "item">TURN LEFT</div>
-		<div id="TRLabel" class = "item">TURN RIGHT</div>
-		<!--<input type="submit" name="text" id="MoveLabel2" value = "TURN LEFT" />
-		<input type="submit" name="text" id="MoveLabel3" value = "TURN RIGHT" />-->
-	</form>
-</div>
-<div id="SecondPanel" class="col-xs-4">
-	<h1>Drop Code Label Here</h1>
-	<div class = "droppable-part">
-	<!--<ul class="ul-type">
-      {{#each codes}}
-        {{> Code}}
-      {{/each}}
-    </ul>-->
+	<div class="col-xs-4" id="image-left">
+		<img class="img-responsive" src="/img/frozen.jpg">
 	</div>
-</div>
-<div id="footer" >
-   <p>	CS 401 Project </p>
-   <p>  Team: Sena Kaya, Ezgi Özdil, Elif Doğalı </p>
-</div>
+	<div id="FirstPanel" class="col-xs-4">
+		<h1> CODES </h1>
+		<div class="items">
+			{{#each moveTypes }}
+				{{> moveTypeItem }}
+			{{/each}}
+		</div>
+	</div>
+	<div id="SecondPanel" class="col-xs-4 droppable">
+		<h1>Drop Code Label Here</h1>
+		<div class="sortable">
+      {{#each moves}}
+        {{> moveItem}}
+      {{/each}}
+		</div>
+	</div>
+	<div class="col-xs-12 all-moves-outer">
+		{{> allMoves}}
+	</div>
+	<div id="footer">
+		<p> CS 401 Project </p>
+		<p> Team: Sena Kaya, Ezgi Özdil, Elif Doğalı </p>
+	</div>
 </template>
 
-<template name="Code">
-  <li class="{{#if checked}}checked{{/if}}">
-    <button class="delete">&times;</button>
-	<span class="text">{{text}}</span>
-  </li>
+<template name="allMoves">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>moveType</th>
+				<th>moveLabel</th>
+				<th>index</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each moves}}
+				<tr>
+					<td>{{_id}}</td>
+					<td>{{type}}</td>
+					<td>{{label}}</td>
+					<td>{{index}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
 </template>
+
+<template name="moveTypeItem">
+	<div data-label="{{label}}" data-id="{{_id}}" class="move-item draggable-item">{{label}}</div>
+</template>
+
+<template name="moveItem">
+	<div data-id="{{_id}}" class="move-item">
+		<button class="delete"><i class="fa fa-remove"></i></button>
+		<span class="text">{{label}}</span>
+	</div>
+</template>
+
 <body>
-    {{> sAlert}}
+	{{> sAlert}}
 </body>
