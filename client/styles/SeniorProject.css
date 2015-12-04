@@ -19,12 +19,9 @@ body {
 
   border-radius: 20px;
   height: 500px;
-  background-color: #FFE5FF;
+  background-color: #FFb3e5;
 }
 
-#image-left img{
-  width:100%;
-}
 #SecondPanel {
 
   height: 500px;
@@ -82,6 +79,10 @@ body {
   z-index:999;
 }
 
+.move-item.current-move {
+  background: #99e6ff;
+}
+
 .items text {
   width: auto;
   text-align: center;
@@ -126,7 +127,7 @@ body {
 .delete {
   float: right;
   font-weight: bold;
-  background: black;
+  background: #FFb3e5;
   font-size: 1em;
   border: none;
   position: relative;

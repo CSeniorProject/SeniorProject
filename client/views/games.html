@@ -1,6 +1,6 @@
 <template name="game">
 	<div class="col-xs-4" id="image-left">
-		<img class="img-responsive" src="/img/frozen.jpg">
+		{{> PlayScene }}
 	</div>
 	<div id="FirstPanel" class="col-xs-4">
 		<h1> CODES </h1>
@@ -9,6 +9,8 @@
 				{{> moveTypeItem }}
 			{{/each}}
 		</div>
+
+		<button class="btn btn-primary btn-start-stop">{{startButtonText}}</button>
 	</div>
 	<div id="SecondPanel" class="col-xs-4 droppable">
 		<h1>Drop Code Label Here</h1>
@@ -31,8 +33,6 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th>ID</th>
-				<th>moveType</th>
 				<th>moveLabel</th>
 				<th>index</th>
 			</tr>
@@ -40,8 +40,6 @@
 		<tbody>
 			{{#each moves}}
 				<tr>
-					<td>{{_id}}</td>
-					<td>{{type}}</td>
 					<td>{{label}}</td>
 					<td>{{index}}</td>
 				</tr>
@@ -55,7 +53,7 @@
 </template>
 
 <template name="moveItem">
-	<div data-id="{{_id}}" class="move-item">
+	<div data-id="{{_id}}" class="move-item {{maybeCurrentMove}}">
 		<button class="delete"><i class="fa fa-remove"></i></button>
 		<span class="text">{{label}}</span>
 	</div>

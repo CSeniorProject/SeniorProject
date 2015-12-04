@@ -1,16 +1,34 @@
-var orderedMoves = function () {
-  return Moves.find({}, {
-    sort: {
-      index: 1
-    }
-  });
-};
+
 
 Template.allMoves.helpers({
-  moves: orderedMoves
+  moves: Moves.getOrdered
+});
+
+Template.game.events({
+  'click .btn-start-stop': function () {
+    var playState = Game.playState.get();
+    if(playState === 'ready') {
+      Game.start();
+    } else if(playState === 'playing') {
+      Game.stop();
+    } else if(playState === 'finished') {
+      Game.resetState();
+    }
+  }
 });
 
 Template.game.helpers({
+  startButtonText: function () {
+    var playState = Game.playState.get();
+    if(playState === 'ready') {
+      return 'Start';
+    } else if(playState === 'playing') {
+      return 'Stop';
+    } else if(playState === 'finished') {
+      return 'Reset';
+    }
+  },
+
   moveTypes: function() {
     return [{
       _id: "move",
@@ -24,7 +42,7 @@ Template.game.helpers({
     }];
   },
 
-  moves: orderedMoves
+  moves: Moves.getOrdered
 });
 
 Template.moveTypeItem.onRendered(function() {
@@ -110,5 +128,14 @@ Template.game.onRendered(function() {
 Template.moveItem.events({
   "click .delete": function() {
     Moves.remove(this._id);
+  }
+});
+
+Template.moveItem.helpers({
+  'maybeCurrentMove': function () {
+    var currentMoveId = Game.currentMoveId.get();
+    if(currentMoveId && currentMoveId === this._id) {
+      return 'current-move';
+    }
   }
 });
