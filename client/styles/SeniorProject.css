@@ -1,32 +1,28 @@
 /* CSS declarations go here */
-@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic&subset=latin,latin-ext);
 body {
-  font-family: sans-serif;
+  font-family: 'Ruda', sans-serif;
   background-attachment: fixed;
   text-align:center;
 
 
-  font-family: 'Noto Serif', serif;
-  font-size: 14px;
+  font-size: 15px;
 }
-
 .s-alert-info.s-alert-effect-scale {
     background: pink;  /* your background color here */
     color: white;  /* your text color here */
 }
-
 #FirstPanel {
 
   border-radius: 20px;
   height: 500px;
-  background-color: #FFFFCC;
+  background-color: #fdb9f7;
 }
 
 #SecondPanel {
 
   height: 500px;
   border-radius: 20px ;
-  background-color: #C5EFF7;
+  background-color: #c3f4ff;
 }
 
 #SecondPanel ul {
@@ -43,10 +39,11 @@ body {
 	width: 95%;
 	height: 80%;
 	background: transparent;
+  text-align: center;
 
 }
 .draggable-item {
-	
+
     text-align: center;
 	border-radius: 40%;
 	text-align: center;
@@ -63,13 +60,14 @@ body {
   padding: 10px 0;
   background: transparent;
   border: none;
-  width: 50%;
+  width: 70%;
   padding-right: 80px;
-  font-size: 1em;
+  font-size: 2em;
   display: block;
   background-color:white;
-  box-shadow:0px 0px 3px 1px #DC6CDC;
+  box-shadow:3px 3px 3px 1px #e1b9fd;
   margin: 0 auto;
+  text-align: center;
 }
 
 .move-item {
@@ -77,20 +75,20 @@ body {
   padding: 10px 0;
   background: transparent;
   border: none;
-  width: 50%;
-  padding-right: 80px;
+  width: 40%;
   font-size: 1em;
   display: block;
-  background-color:white;
-  box-shadow:0px 0px 3px 1px #DC6CDC;
+  background-color:#feeeff;
+  box-shadow:3px 3px 3px 1px #e1b9fd;
   margin: 0 auto;
   z-index:999;
   margin-top: 10px;
-  text-align: center;
+
 }
 
 .move-item.current-move {
   background: #99e6ff;
+
 }
 
 .items text {
@@ -112,6 +110,7 @@ body {
   box-shadow: none;
 }
 
+
 #footer {
     padding-top:  15px;
     color:black;
@@ -128,6 +127,44 @@ body {
   outline: 0;
 }
 
+.run-game-btn {
+  width:20%;
+  background-color: rgb(220, 247, 255);
+  box-shadow: 1px 1px 1px black;
+  font-size: 17px;
+}
+
+.moving-button{
+  text-align: center;
+  z-index: 123;
+  margin: 13px auto;
+  padding: 10px 0px;
+  display: block;
+  height: 45px;
+  width: 175px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+  border-radius: 10px;
+  border-bottom: 4px solid #E0BAFD;
+  box-shadow: 6px 6px 6px #CBBCDE;
+  user-select: none;
+  background: #feeeff;
+  transition: background 0.05s linear;
+  background-size: 1px 200px;
+  transition: all .05s linear;
+}
+
+.moving-button:hover{
+	background-position:100px;
+}
+
+.moving-button:active {
+	box-shadow: 2px 2px 2px #777;
+	border-bottom:1px solid #0045A6;
+	transform: translateY(3px);
+}
+
 .ul-type {
   margin: 0;
   padding: 0;
@@ -141,6 +178,8 @@ body {
   font-size: 1em;
   border: none;
   position: relative;
+  margin-right: 5px;
+  margin-top: -3px;
 }
 
 .ul-type li {
@@ -168,13 +207,14 @@ body {
 }
 
 .btn-start-stop {
-    margin-top: 30px;
+    margin-top: 170px;
 	display: inline-block;
 }
 div .navbar img {
-    margin: 5px;
+    margin: 1px;
     border: 1px solid #ccc;
     float: right;
     width: relative;
-	height:60px;
+	height:50px;
+
 }

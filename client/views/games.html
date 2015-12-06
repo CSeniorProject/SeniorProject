@@ -9,7 +9,7 @@
 				{{> moveTypeItem }}
 			{{/each}}
 		</div>
-		<button class="btn btn-primary btn-start-stop">{{startButtonText}}</button>
+		<button class="btn-start-stop run-game-btn">{{startButtonText}}</button>
 	</div>
 	<div id="SecondPanel" class="col-xs-4 droppable">
 		<h1>Workspace</h1>
@@ -48,11 +48,11 @@
 </template>
 
 <template name="moveTypeItem">
-	<div data-label="{{label}}" data-id="{{_id}}" class="move-item draggable-item">{{label}}</div>
+	<div data-label="{{label}}" data-id="{{_id}}" class="moving-button draggable-item"><span>{{label}}</span></div>
 </template>
 
 <template name="moveItem">
-	<div data-id="{{_id}}" class="move-item {{maybeCurrentMove}}">
+	<div data-id="{{_id}}" class="moving-button moving-right {{maybeCurrentMove}}">
 		<button class="delete"><i class="fa fa-remove"></i></button>
 		<span class="text">{{label}}</span>
 	</div>
