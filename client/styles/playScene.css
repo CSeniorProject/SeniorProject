@@ -1,16 +1,16 @@
 .play-scene {
   position: relative;
   border-radius: 20px;
-  width: 450px;
-  height: 450px;
-  background: #d9b3ff;
+  width: 459px;
+  height: 500px;
+  background: #FFCCFF;
 }
 .player {
   position: absolute;
-  top: 0;
+  top: 170px;
   left: 0;
-  width: 45px;
-  height: 45px;
+  width: 90px;
+  height: 100px;
 
   transition: .5s transform;
   transform: translate3d(0,0,0);
