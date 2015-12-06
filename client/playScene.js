@@ -13,7 +13,7 @@ Game = {
   UP: 3,
   XMAX: 450,
   YMAX: 450,
-  UNIT: 45
+  UNIT: 45,
 };
 
 Game.dep = new Tracker.Dependency();
