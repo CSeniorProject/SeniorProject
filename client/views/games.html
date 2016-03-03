@@ -1,6 +1,7 @@
 <template name="game">
 	<div class="col-xs-4" id="image-left">
 		{{> PlayScene }}
+		<button class="btn-start-stop  run-game-btn">{{startButtonText}}</button>
 	</div>
 	<div id="FirstPanel" class="col-xs-4">
 		<h1> Blocks </h1>
@@ -9,7 +10,7 @@
 				{{> moveTypeItem }}
 			{{/each}}
 		</div>
-		<button class="btn-start-stop run-game-btn">{{startButtonText}}</button>
+
 	</div>
 	<div id="SecondPanel" class="col-xs-4 droppable">
 		<h1>Workspace</h1>
@@ -18,9 +19,6 @@
         {{> moveItem}}
       {{/each}}
 		</div>
-	</div>
-	<div class="col-xs-12 all-moves-outer">
-		{{> allMoves}}
 	</div>
 	<div id="footer">
 		<p> CS 401 Project </p>
@@ -46,6 +44,7 @@
 		</tbody>
 	</table>
 </template>
+
 
 <template name="moveTypeItem">
 	<div data-label="{{label}}" data-id="{{_id}}" class="moving-button draggable-item"><span>{{label}}</span></div>

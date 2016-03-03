@@ -1,7 +1,7 @@
 .play-scene {
   position: relative;
   border-radius: 20px;
-  width: 459px;
+  width: 425px;
   height: 500px;
   background: #e1b9fd;
 }
@@ -14,4 +14,9 @@
 
   transition: .5s transform;
   transform: translate3d(0,0,0);
+}
+
+.moving-button.moving-right.current-move {
+  background-color: #97E1E8;
+  border-bottom: 4px solid #74B7B4;
 }

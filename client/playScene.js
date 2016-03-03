@@ -94,7 +94,7 @@ Game.getTransform = function () {
     translate3d(Game.state.x, Game.state.y, 0),
     rotateZ(Game.state.rotation),
     ';'
-  ].join(' ');
+  ].join  (' ');
 };
 
 Game.start = function () {

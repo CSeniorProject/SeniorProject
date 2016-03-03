@@ -19,10 +19,12 @@
               <li><a href="{{ pathFor 'game'}}">Play Game</a></li>
               <li><a href="#contact">About</a></li>
             </ul>
-			<img src="img/ozu.jpg" />
+            <ul class="navbar navbar-right">
+              <img src="img/ozu.jpg" />
+              {{> loginButtons}}
+            </ul>
           </div>
-		  {{> loginButtons}}
-		</div>
+        </div>
       </nav>
     </div>
   </div>
