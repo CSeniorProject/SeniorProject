@@ -1,44 +1,69 @@
 <template name="game">
-	<div class="col-xs-4" id="image-left">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" > 
+		 <div class="panel panel-default">
+			<div class="col-md-12 col-xs-12"> 
+				<div class="col-md-2 col-xs-2">
+					<img src="img/elsa_face.png" alt="Elsa face" style="width:60px;height:60px;">
+				 </div>
+				 <div class="col-md-10 col-xs-10">
+					<h4 style = "color:rgb(231, 30, 233);">	Hello I am Elsa, Can you help me to reach the diamond? </h4>
+				 </div>
+			</div>
+			
+			<div class="panel-body">
+				<div class="clearfix"></div>
+			 </div>
+		  </div>
+		
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"> 
+			<ul class="pagination">
+			  <li><a href="#">1</a></li>
+			  <li class="active"><a href="#">2</a></li>
+			  <li><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li><a href="#">5</a></li>
+			</ul>
+			
+		</div>	
+	</div>
+	
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="image-left">
     
 		{{> PlayScene }}
 		<button class="btn-start-stop  run-game-btn">{{startButtonText}}</button>
-		<div class="container">
- 
-  <div class="panel panel-default">
-    <div class="panel-body"><img src="img/elsa_face.png" alt="Elsa face" style="float:left;width:60px;height:60px;margin: -11px;"><h4 style = "color:rgb(231, 30, 233);">
-Hello I am Elsa, Can you help me to reach the diamond? 
-</h4>
-  </div>
-  </div>
-		</div>
-	</div>
-	<div id="FirstPanel" class="col-xs-4">
-	<div id = "target">
-     <a href = "#" class= "target"> <h1> Blocks </h1></a>	
+	 
+			</div>
 		
-		<div class="items">
-			{{#each moveTypes }}
-				{{> moveTypeItem }}
-			{{/each}}
+		<div id="FirstPanel" class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div id = "target">
+				 <a href = "#" class= "target"> <h1> Blocks </h1></a>	
+					
+					<div class="items">
+						{{#each moveTypes }}
+							{{> moveTypeItem }}
+						{{/each}}
+					</div>
+			</div>
 		</div>
-</div>
-	</div>
-	<div id="SecondPanel" class="col-xs-4 droppable">
-	<div id = "workspace">
-	 <a href = "#" class= "target"> <h1> Workspace </h1></a>	
-		
-		<div class="sortable">
-      {{#each moves}}
-        {{> moveItem}}
-      {{/each}}
+	
+		<div id="SecondPanel" class="col-lg-4 col-md-4 col-sm-6 col-xs-6 droppable">
+			<div id = "workspace">
+			 <a href = "#" class= "target"> <h1> Workspace </h1></a>	
+				
+				<div class="sortable">
+			  {{#each moves}}
+				{{> moveItem}}
+			  {{/each}}
+				</div>
+			</div>
 		</div>
+	
 	</div>
-	</div>
-	<div id="footer">
-		<p> CS 401 Project </p>
-		<p> Team: Sena Kaya, Ezgi Özdil, Elif Doğalı </p>
-	</div>
+	
 </template>
 
 <template name="allMoves">
@@ -71,13 +96,4 @@ Hello I am Elsa, Can you help me to reach the diamond?
 		<span class="text">{{label}}</span>
 	</div>
 </template>
-
-<body>
-	{{> sAlert}}
-	<title>Bootstrap Case</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</body>
+ 

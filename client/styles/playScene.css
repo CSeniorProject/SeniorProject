@@ -1,12 +1,19 @@
 .play-scene {
   position: relative;
  border-radius: 23px;
-    width: 413px;
-    height: 530px;
+  /*  width: 413px;*/
+  min-height: 530px;
+	height:100%;
+	padding-right:0px;
  /* background: #8042E4; */
   
   background-image: url('../img/resim1.png');
 }
+
+#image-left {	
+	padding-right:0px;
+}
+
 .player {
   position: absolute;
   top: 0px;

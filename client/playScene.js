@@ -161,6 +161,10 @@ Game.move = function () {
 	  Game.writeLog("yetkisiz yer"); 
 		Game.writeLog("Blok Pozisyonu => x:y => " +x/Game.UNIT + ":" + y/Game.UNIT);
 	  Game.playState.set('finished');
+	  
+  Game.state.x = x;
+  Game.state.y = y;
+    Game.dep.changed();
 	  alert(Game.labels.gameOver);
 	  Game.resetState();
 	  return;
@@ -168,6 +172,10 @@ Game.move = function () {
 	  Game.writeLog("yetkisiz yer"); 
 	  Game.writeLog("Blok Pozisyonu => x:y => " +x/Game.UNIT + ":" + y/Game.UNIT);
 	  Game.playState.set('finished');
+	  
+	  Game.state.x = x;
+	  Game.state.y = y;
+    Game.dep.changed();
 	  alert(Game.labels.congrats);
 
 	  Game.resetState();
